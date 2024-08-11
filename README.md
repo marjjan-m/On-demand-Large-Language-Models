@@ -1,2 +1,4 @@
 # On-demand-Large-Language-Models
 Code for my AI Lab project on "On-Demand Large Language Models"
+
+The system architecture includes an HTTP server, a SLURM-based deployment manager, and a resource monitor to optimize the deployment of the Ollama . The HTTP server processes incoming user requests and forwards them to the SLURM deployment manager, which manages the lifecycle of the model instances by starting and stopping jobs in the cluster. The resource monitor monitors job status and node availability to ensure efficient operation and resource utilization. A key feature of this design is a timer-based component that automatically shuts down the model after a period of inactivity, further improving resource efficiency and minimizing unnecessary computational overhead. This integrated approach allows the system to dynamically respond to user demands while maintaining optimal performance and reducing the cost of idle resources.
